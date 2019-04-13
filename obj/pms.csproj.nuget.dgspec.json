@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/sherif/dotnet/pms/pms.csproj": {}
+  },
+  "projects": {
+    "/home/sherif/dotnet/pms/pms.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/sherif/dotnet/pms/pms.csproj",
+        "projectName": "pms",
+        "projectPath": "/home/sherif/dotnet/pms/pms.csproj",
+        "packagesPath": "/home/sherif/.nuget/packages/",
+        "outputPath": "/home/sherif/dotnet/pms/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/home/sherif/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/sherif/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

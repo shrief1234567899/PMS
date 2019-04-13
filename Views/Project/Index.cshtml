@@ -1,0 +1,79 @@
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#all">All</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#pending">Pending</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#delivered">Delivered</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#not_delivered">Not Delivered</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+
+  <div id="all" class="tab-pane active">
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="card border-primary">
+                    <div class="card-header text-white bg-primary">
+                        PJ #1
+                        <span class="badge badge-dark float-right">pending</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pj name</h5>
+                        <p class="card-text">This pj description</p>
+                    </div>
+                    <div class="card-footer">
+                         <small class="text-muted">last updated 3 time ago</small>
+                    </div>
+                </div>
+
+                <div class="card border-success mt-3">
+                    <div class="card-header text-white bg-success">
+                        PJ #2
+                        <span class="badge badge-dark float-right">delivered</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pj name</h5>
+                        <p class="card-text">This pj description</p>
+                    </div>
+                    <div class="card-footer">
+                         <small class="text-muted">last updated 3 time ago</small>
+                    </div>
+                </div>
+
+                <div class="card border-danger mt-3">
+                    <div class="card-header text-white bg-danger">
+                        PJ #3
+                        <span class="badge badge-dark float-right">not delivered</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pj name</h5>
+                        <p class="card-text">This pj description</p>
+                    </div>
+                    <div class="card-footer">
+                         <small class="text-muted">last updated 3 time ago</small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div id="pending" class="tab-pane fade">
+  </div>
+  <div id="delivered" class="tab-pane fade">
+  </div>
+  <div id="not_delivered" class="tab-pane fade">
+  </div>
+</div>
