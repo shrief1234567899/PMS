@@ -18,7 +18,6 @@
 </ul>
 
 <div class="tab-content">
-
   <div id="all" class="tab-pane active">
     <div class="container mt-3">
         <div class="row">
@@ -33,7 +32,14 @@
                         <p class="card-text">This pj description</p>
                     </div>
                     <div class="card-footer">
-                         <small class="text-muted">last updated 3 time ago</small>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <small class="text-muted">last updated 3 time ago</small>
+                        </div>
+                        <div class="col-md-6">
+                          <!-- delete and edit icon (in the future) -->
+                        </div>
+                      </div>
                     </div>
                 </div>
 
@@ -66,10 +72,12 @@
                 </div>
 
             </div>
+            <div class="col-md-5 animate">
+                @{Html.RenderPartial("~/Views/Project/Show.cshtml");}
+            </div>
         </div>
     </div>
   </div>
-
   <div id="pending" class="tab-pane fade">
   </div>
   <div id="delivered" class="tab-pane fade">
