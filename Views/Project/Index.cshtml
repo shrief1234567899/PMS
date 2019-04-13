@@ -37,7 +37,8 @@
                           <small class="text-muted">last updated 3 time ago</small>
                         </div>
                         <div class="col-md-6">
-                          <!-- delete and edit icon (in the future) -->
+                          <a href="#"><i class="fas fa-trash-alt float-right text-danger"></i></a>
+                          <a href="#"><i class="fas fa-edit float-right text-primary mr-3"></i></a>
                         </div>
                       </div>
                     </div>
@@ -53,7 +54,15 @@
                         <p class="card-text">This pj description</p>
                     </div>
                     <div class="card-footer">
-                         <small class="text-muted">last updated 3 time ago</small>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <small class="text-muted">last updated 3 time ago</small>
+                        </div>
+                        <div class="col-md-6">
+                          <a href="#"><i class="fas fa-trash-alt float-right text-danger"></i></a>
+                          <a href="#"><i class="fas fa-edit float-right text-primary mr-3"></i></a>
+                        </div>
+                      </div>
                     </div>
                 </div>
 
@@ -67,12 +76,20 @@
                         <p class="card-text">This pj description</p>
                     </div>
                     <div class="card-footer">
-                         <small class="text-muted">last updated 3 time ago</small>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <small class="text-muted">last updated 3 time ago</small>
+                        </div>
+                        <div class="col-md-6">
+                          <a href="#"><i class="fas fa-trash-alt float-right text-danger"></i></a>
+                          <a href="#"><i class="fas fa-edit float-right text-primary mr-3"></i></a>
+                        </div>
+                      </div>
                     </div>
                 </div>
 
             </div>
-            <div class="col-md-5 animate">
+            <div class="col-md-5">
                 @{Html.RenderPartial("~/Views/Project/Show.cshtml");}
             </div>
         </div>
