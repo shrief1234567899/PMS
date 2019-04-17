@@ -32,3 +32,4 @@
 /home/sherif/dotnet/pms/obj/Debug/netcoreapp2.2/Razor/Views/Project/Add.g.cshtml.cs
 /home/sherif/dotnet/pms/obj/Debug/netcoreapp2.2/Razor/Views/Project/Index.g.cshtml.cs
 /home/sherif/dotnet/pms/obj/Debug/netcoreapp2.2/Razor/Views/Project/Show.g.cshtml.cs
+/home/sherif/dotnet/pms/obj/Debug/netcoreapp2.2/Razor/Views/User/Profile.g.cshtml.cs

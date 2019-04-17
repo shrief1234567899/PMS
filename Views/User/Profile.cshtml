@@ -1,0 +1,69 @@
+@{
+    ViewData["Title"] = "Profile";
+}
+<div class="Container">
+    <div class="row">
+        <div class="card mb-3 border-primary col-md-12">
+            <div class="card-header bg-primary text-white font-weight-bold">
+                Profile
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card shadow mb-4 bg-dark text-white">
+                            <div class="card-header bg-primary white py-3">
+                                <h6 class="m-0 font-weight-bold">Projects</h6>
+                            </div>
+                            <div class="profile-img mt-2">
+                                <img src="https://scontent-hbe1-1.xx.fbcdn.net/v/t1.0-9/50549188_2160272934050183_6379706522686980096_n.jpg?_nc_cat=102&_nc_ht=scontent-hbe1-1.xx&oh=3cad7354d843d53dc4641019ddfce9c3&oe=5D4331D3" alt="profile photo"/>
+                                <div class="file btn btn-lg btn-primary">
+                                    <input type="file" name="file"/>
+                                    Change Photo
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="card-body">
+                                    <h4 class="small font-weight-bold">Pending<span class="float-right">20%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Delivered <span class="float-right">40%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Not Delivered<span class="float-right">60%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="col-md-8">
+                        <div class="form-group">
+                            <label for="first_name">First Name:</label>
+                            <input class="form-control" id="first_name" placeholder="first name">
+                        </div>
+                        <div class="form-group">
+                            <label for="last_name">Last Name:</label>
+                            <input class="form-control" id="last_name" placeholder="last name">
+                        </div>
+                        <div class="form-group">
+                            <label for="job_description">Job Description:</label>
+                            <textarea class="form-control" id="job_description" placeholder="job description (Software Engineer)"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input class="form-control" type="email" id="email" placeholder="example@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">Mobile:</label>
+                            <input class="form-control" type="mobile" id="mobile" placeholder="mobile">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-5">Edit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

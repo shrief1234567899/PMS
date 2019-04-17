@@ -14,5 +14,10 @@ namespace pms.Controllers
         {
             return View("~/Views/Customer/Index.cshtml");
         }
+
+         public IActionResult Profile()
+        {
+            return View("~/Views/User/Profile.cshtml");
+        }
     }
 }
