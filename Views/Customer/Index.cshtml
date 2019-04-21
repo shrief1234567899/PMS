@@ -7,8 +7,8 @@
         <div class="col-md-5">
             @{Html.RenderPartial("~/Views/Project/Add.cshtml");}
         </div>
-        <div class="col-md-7">
-            <div class="card shadow">
+        <div class="col-md-7 projects">
+            <div class="card shadow mb-3">
                 <div class="card-header">PJ #1</div>
                 <div class="card-body">
                     <div class="row">
@@ -50,7 +50,7 @@
                 </div>
             </div>
 
-            <div class="card shadow mt-3">
+            <div class="card shadow mb-3">
                 <div class="card-header">PJ #1</div>
                 <div class="card-body">
                     <div class="row">
@@ -92,7 +92,7 @@
                 </div>
             </div>
 
-             <div class="card shadow mt-3">
+             <div class="card shadow mb-3">
                 <div class="card-header">PJ #1</div>
                 <div class="card-body">
                     <div class="row">
@@ -136,3 +136,36 @@
         </div>
     </div>
 </div>
+
+@section scripts{
+    <script>
+    $('#add_project').on("submit" , function(event){
+        event.preventDefault();
+        $('.projects').prepend(`
+            <div class="card shadow mb-3" id="4">
+                <div class="card-header">new project</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img class="img-thumbnail" src="/images/pj_logo.png" alt="logo" width="100" height="100">
+                        </div>
+                        <div class="col-md-9">
+                            <h5 class="card-title">Pic W Post</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">PicWPost is a start up on the rise that is poised to change the world of accounting experience.</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <small class="text-muted">last updated 3 time ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `);
+        $('#4').hide();
+        $('#4').slideToggle();
+    })
+    </script>
+}
