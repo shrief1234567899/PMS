@@ -133,33 +133,35 @@
     $('.edit-project').hide();
 
     $('.view-project').on("click" , function(event){
-        $('.edit-project').hide();
-        var projectId = $(this).attr('id');
-        var status = $(this).attr('status');
-        var viewProjectCardHeader = $('.view-project-header');
-        var viewProjectCard = $('.view-project-card');
-        var viewProjectCardFooter = $('.view-project-footer');
-        
-        viewProjectCardHeader.removeClass();
-        viewProjectCardHeader.addClass('card-header text-white view-project-header bg-' + status);
-        
-        viewProjectCardFooter.removeClass();
-        viewProjectCardFooter.addClass('card-footer view-project-footer bg-' + status);
+      AjaxRequest('GET' , '/Project/GetProject');
 
-        viewProjectCard.removeClass()
-        viewProjectCard.addClass('card mb-3 shadow view-project-card border-' + status);
+      $('.edit-project').hide();
+      var projectId = $(this).attr('id');
+      var status = $(this).attr('status');
+      var viewProjectCardHeader = $('.view-project-header');
+      var viewProjectCard = $('.view-project-card');
+      var viewProjectCardFooter = $('.view-project-footer');
+      
+      viewProjectCardHeader.removeClass();
+      viewProjectCardHeader.addClass('card-header text-white view-project-header bg-' + status);
+      
+      viewProjectCardFooter.removeClass();
+      viewProjectCardFooter.addClass('card-footer view-project-footer bg-' + status);
 
-        $('.view-project-name').text('name');
-        $('.view-project-description').text('desc');
-        $('.view-project-experience').text('exp');
-        $('.view-project-details').text('google.com');
-        $('.view-project-details').attr("href", 'https://www.google.com/');
-        $('.view-project-manager').html(`
-                    manager name
-                    <span class="badge badge-dark float-right">Assigned from test date</span>`);
-        
-        viewProjectCard.hide();
-        viewProjectCard.fadeToggle();
+      viewProjectCard.removeClass()
+      viewProjectCard.addClass('card mb-3 shadow view-project-card border-' + status);
+
+      $('.view-project-name').text('name');
+      $('.view-project-description').text('desc');
+      $('.view-project-experience').text('exp');
+      $('.view-project-details').text('google.com');
+      $('.view-project-details').attr("href", 'https://www.google.com/');
+      $('.view-project-manager').html(`
+                  manager name
+                  <span class="badge badge-dark float-right">Assigned from test date</span>`);
+      
+      viewProjectCard.hide();
+      viewProjectCard.fadeToggle();
     })
 
     $('.edit-pj-icon').on("click" , function(event){
@@ -180,5 +182,30 @@
         
         $('.list-project-card.' + projectId).slideUp();
     })
+
+    function AjaxRequest(method , url , data = null) {
+        $.ajax({
+            type: method,
+            url: '@Url.Action("GetProject", "Project")',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: OnSuccessCall,
+            error: OnErrorCall
+        });
+    }
+
+    function OnSuccessCall(response) {
+      /*response (status , data , displaySweetAlert , message)*/
+      if(response.displaySweetAlert){
+        swal("Good job!", response.message , "success")
+      }
+    }
+
+    function OnErrorCall(response) {
+      /*response (status , data , displaySweetAlert , message)*/
+      if(response.displaySweetAlert){
+        swal("Error Occured!", response.message , "error")
+      }
+    }
     </script>
 }

@@ -14,5 +14,11 @@ namespace pms.Controllers
         {
             return View();
         }
+        
+        [HttpGet]
+        public ActionResult GetProject()
+        {
+            return Json(new {status="200", data="Blech" , displaySweetAlert=false});
+        }
     }
 }
